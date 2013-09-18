@@ -1,0 +1,82 @@
+body {
+background: url(http://www.digimurai.com/revolution/img/bgr.jpg) top center no-repeat #101620;
+}
+.sitecontainer {
+display:block;
+margin:0;
+padding:0;
+width:100%;
+height:auto;
+border-top:5px solid #136;
+}
+.sitecontent {
+padding:10px;
+box-shadow:0 0 2px 2px #000;
+}
+.pagewidth {
+width:850px;
+margin:auto;
+}
+.pagepad {
+padding:10px;
+}
+.mylogo {
+display:block;
+margin:0;padding:0;
+margin-top:-5px;
+margin-left:10px;
+height:70px;
+color:#CCF;
+font-size:26px;
+font-weight:bold;
+text-shadow:0 2px 5px #000;
+line-height:70px;
+}
+.codeitem {
+color:#C70;
+font-size:36px;
+line-height:70px;
+}
+.mylogoname {
+}
+.impactwords {
+display:block;
+color:#FFF;
+text-align:center;
+text-shadow:0 2px 5px #000;
+}
+.impactsupport {
+margin:auto;
+width:70%;
+padding:20px 0;
+border:5px solid #000;
+border-top:0;
+border-bottom:0;
+}
+
+#topmenu {
+display:block;
+margin:0;padding:0;
+list-style:none;
+}
+#topmenu > li {
+display:inline-block;
+}
+#topmenu > li > a {
+display:block;
+width:100px;
+color:#CCC;
+font-size:18px;
+text-align:center;
+text-decoration:none;
+line-height:70px;
+}
+#topmenu > li > a:hover, #topmenu > li > a:focus {
+color:#FFF;
+}
+.current_topmenu > a,
+.current_topmenu > a:hover,
+.current_topmenu > a:focus {
+background:#333;
+color:#FFF !important;
+}
