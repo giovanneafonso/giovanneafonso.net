@@ -1,13 +1,24 @@
 body {
 background: url(http://www.digimurai.com/revolution/img/bgr.jpg) top center no-repeat #101620;
 }
+::selection  {
+background:#DDF;
+}
 .sitecontainer {
 display:block;
 margin:0;
 padding:0;
 width:100%;
 height:auto;
-border-top:5px solid #111;
+}
+.pageheader {
+//background:url(http://www.allegra.com/hcp/Images/header_background1-1.png) center top no-repeat transparent;
+background:url(../img/headerbg.png) center top no-repeat transparent;
+background:transparent;
+box-shadow: inset 0 50px 150px 0 #000,
+            inset 0 -30px 100px 0 #000,
+            0 3px 10px 1px #111;
+//box-shadow:0 2px 2px 1px #111;
 }
 .sitecontentbg {
 /*
@@ -39,7 +50,6 @@ padding:10px;
 display:block;
 margin:0;padding:0;
 margin-top:-5px;
-margin-left:10px;
 height:70px;
 color:#CCF;
 font-size:26px;
@@ -56,6 +66,7 @@ line-height:70px;
 }
 .impactwords {
 display:block;
+padding:10px 0 30px;
 color:#FFF;
 text-align:center;
 text-shadow:0 2px 5px #000;
@@ -65,6 +76,7 @@ margin:auto;
 margin-bottom:20px;
 width:70%;
 padding:20px 0;
+z-index:99;
 /*
 border:5px solid #000;
 border-top:0;
@@ -74,7 +86,7 @@ border-bottom:0;
 
 #topmenu {
 display:block;
-margin:0;padding:0;
+margin:0px;padding:0;
 list-style:none;
 }
 #topmenu > li {
@@ -88,14 +100,23 @@ font-size:18px;
 text-align:center;
 text-decoration:none;
 line-height:70px;
+text-shadow:1px 1px 1px #000;
 }
 #topmenu > li > a:hover, #topmenu > li > a:focus {
 color:#FFF;
+background:#202020;
+box-shadow: inset 0 25px 3px rgba(255,255,255,0.1), 
+            inset 0 -15px 30px rgba(0,0,0,0.4),
+            0 5px 10px rgba(0,0,0,0.5);
 }
 .current_topmenu > a,
 .current_topmenu > a:hover,
 .current_topmenu > a:focus {
-background:#333;
+//background:#111;
+box-shadow: inset 0 25px 3px rgba(255,255,255,0.1), 
+            inset 0 -15px 30px rgba(0,0,0,0.4),
+            0 5px 10px rgba(0,0,0,0.5);
+background:#111;
 color:#FFF !important;
 }
 
@@ -152,6 +173,8 @@ text-align:right;
 .bodycontent {
 min-height:500px;
 margin:0;
+padding-top:5px;
+padding-bottom:15px;
 //background:url(https://eu.static.mega.co.nz/images/mega/background.jpg);
 }
 .bodytitle {
@@ -161,9 +184,9 @@ text-align:center;
 }
 .bodytitle h1 {
 margin:0;
-color:#FFC;
-font-size:38px;
-line-height:1em;
+color:#EEF;
+font-size:32px;
+line-height:40px;
 text-shadow:1px 1px 1px #000;
 }
 
@@ -172,4 +195,68 @@ text-shadow:1px 1px 1px #000;
 .abt-text {
 font-size:13px;
 text-align:justify;
+}
+
+
+.photo-frame, .photo-frame-front {
+position:relative;
+}
+.photo-frame:before
+{
+/*==========================================================
+ * http://www.webtutorialplus.com/glass-effects-with-css/
+ *==========================================================
+ */
+content: "";
+display: block;
+position: absolute;
+right:0;
+left:0;
+top:0;
+bottom:0;
+/*
+width: 520px;
+height: 300px;
+*/
+border-radius: 10px;
+background-color: rgba(0,0,0,0.1); 
+box-shadow: inset 0 50px rgba(255,255,255,0.2), 
+            inset 0 -15px 30px rgba(0,0,0,0.4),
+            0 5px 10px rgba(0,0,0,0.5);
+/*-moz-transform: translate(-15px, -285px);
+-webkit-transform: translate(-15px, -285px);
+-o-transform: translate(-15px, -285px);
+-ms-transform: translate(-15px, -285px);
+transform: translate(-15px, -285px);*/
+z-index:-1;
+}
+.photo-frame-front:after {
+content: "";
+display: block;
+position: absolute;
+right:0;
+left:0;
+top:0;
+bottom:0;
+border-radius: 10px;
+background-color: rgba(0,0,0,0.1); 
+box-shadow: inset 0 50px 10px rgba(255,255,255,0.2), 
+            inset 0 -15px 30px rgba(0,0,0,0.4),
+            0 5px 10px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+
+#pagefooter {
+display:block;
+margin-top:30px;
+background: url(http://www.digimurai.com/revolution/img/footer-bgr-tile.jpg) left top repeat-x;
+}
+#pagefooter_inner {
+background: url(http://www.digimurai.com/revolution/img/footer-bgr-img.jpg) center bottom no-repeat;
+min-height:280px;
 }
