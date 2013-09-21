@@ -38,6 +38,7 @@ background:#101620;
 box-shadow:0 0 2px 2px #000;
 border-top:5px solid #111;
 */
+padding-top:15px;
 }
 .pagewidth {
 width:950px;
@@ -73,8 +74,7 @@ text-shadow:0 2px 5px #000;
 }
 .impactsupport {
 margin:auto;
-margin-bottom:20px;
-width:70%;
+margin-bottom:10px;
 padding:20px 0;
 z-index:99;
 /*
@@ -173,7 +173,6 @@ text-align:right;
 .bodycontent {
 min-height:500px;
 margin:0;
-padding-top:5px;
 padding-bottom:15px;
 //background:url(https://eu.static.mega.co.nz/images/mega/background.jpg);
 }
