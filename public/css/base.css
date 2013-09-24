@@ -219,7 +219,7 @@ height: 300px;
 */
 border-radius: 10px;
 background-color: rgba(0,0,0,0.1); 
-box-shadow: inset 0 50px rgba(255,255,255,0.2), 
+box-shadow: inset 0 50px 10px rgba(255,255,255,0.1), 
             inset 0 -15px 30px rgba(0,0,0,0.4),
             0 5px 10px rgba(0,0,0,0.5);
 /*-moz-transform: translate(-15px, -285px);
@@ -256,6 +256,11 @@ margin-top:30px;
 background: url(http://www.digimurai.com/revolution/img/footer-bgr-tile.jpg) left top repeat-x;
 }
 #pagefooter_inner {
+padding-top:20px;
 background: url(http://www.digimurai.com/revolution/img/footer-bgr-img.jpg) center bottom no-repeat;
 min-height:280px;
+color:#777;
+}
+#pagefooter_inner h3 {
+color:#999;
 }
