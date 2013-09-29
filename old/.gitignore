@@ -213,15 +213,3 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-
-
-
-
-
-/bootstrap/compiled.php
-/vendor
-composer.phar
-composer.lock
-.DS_Store
-old/
-vendor/
