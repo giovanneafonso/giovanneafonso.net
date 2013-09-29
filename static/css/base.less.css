@@ -1,3 +1,16 @@
+@theme-title-color: #F70;
+@theme-title-font: 'Cookie';
+.theme-font (@font: @theme-title-font) {
+    font-family: @font;
+}
+
+.theme-title-font {
+    .theme-font;
+}
+.theme-title-color {
+    color:@theme-title-color;
+}
+
 body {
 background: url(http://www.digimurai.com/revolution/img/bgr.jpg) top center no-repeat #101620;
 }
@@ -64,15 +77,15 @@ display:block;
 margin:0;padding:0;
 margin-top:-5px;
 height:70px;
-color:#CCF;
-font-family:'Cookie';
-font-size:26px;
+color:#EEE;
+.theme-font;
+font-size:34px;
 font-weight:bold;
 text-shadow:0 2px 5px #000;
 line-height:70px;
 }
 .codeitem {
-color:#C70;
+color:@theme-title-color;
 font-size:36px;
 line-height:70px;
 }
@@ -82,14 +95,14 @@ line-height:70px;
 display:block;
 padding:10px 0 30px;
 color:#FFF;
-font-family:'Cookie';
+.theme-font;
 text-align:center;
 text-shadow:0 2px 5px #000;
 }
 .impactsupport {
 margin:auto;
 margin-bottom:10px;
-padding:20px 0;
+padding:0px 0;
 z-index:99;
 /*
 border:5px solid #000;
@@ -110,7 +123,7 @@ display:inline-block;
 display:block;
 width:100px;
 color:#CCC;
-font-family:'Cookie';
+.theme-font;
 font-size:22px;
 text-align:center;
 text-decoration:none;
@@ -161,7 +174,8 @@ padding:5px 0;
 border-bottom:1px solid #202020;
 background:#000;
 color:#FFF;
-font-size:18px;
+.theme-font;
+font-size:28px;
 text-align:center;
 }
 .skill-list {
@@ -172,7 +186,7 @@ margin-bottom:10px;
 }
 .skill-title {
 display:block;
-color:#F70;
+color:@theme-title-color;
 text-align:right;
 font-weight:bold;
 }
@@ -266,8 +280,47 @@ box-shadow: inset 0 50px 10px rgba(255,255,255,0.2),
 */
 
 
+#myresume {
+color:#ddd;
+}
+#myresume p {
+font-size:14px;
+color:#BBB;
+}
+#myresume h4 {
+color:@theme-title-color;
+.theme-font;
+font-size:32px;
+}
+#mytopresume {
+padding:15px;
+background:#f7f7ff;
+background:url(http://www.designbolts.com/wp-content/uploads/2012/12/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg);
+border:5px solid #FFF;
+border-radius:5px;
+color:#333;
+}
+#mytopresume h4 {
+color:#000;
+}
+#mytopresume p {
+color:#333;
+}
+#myuniversities {
+list-style:none;
+margin:0;
+}
+#myuniversities > li {
+width:50%;
+float:left;
+}
+#myuniversities h5 {
+font-size:18px;
+color:#FFF;
+}
+#myuniversities p {
 
-
+}
 
 
 #pagefooter {
@@ -282,5 +335,8 @@ min-height:280px;
 color:#777;
 }
 #pagefooter_inner h3 {
-color:#999;
+margin:10px 0;
+.theme-font;
+font-size:32px;
+color:#BBB;
 }
