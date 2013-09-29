@@ -13,10 +13,16 @@
 
 Route::get('/', function()
 {
-	return View::make('base',array('content'=>View::make('index')));
+	return View::make('base',array(
+        'currentmenu' => 'index',
+        'content'     => View::make('index')
+    ));
 });
 
 Route::get('/portfolio', function()
 {
-    return View::make('base',array('content'=>View::make('portfolio')));
+    return View::make('base',array(
+        'currentmenu' => 'portfolio',
+        'content'=>View::make('portfolio')
+    ));
 });

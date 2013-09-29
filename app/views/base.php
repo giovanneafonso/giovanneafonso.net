@@ -1,4 +1,13 @@
-<!doctype html>
+<?php
+
+$cmc = function($name) use ($currentmenu) {
+    if($name==$currentmenu) {
+        return 'current_topmenu';
+    }
+    return '';
+};
+
+?><!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -20,9 +29,9 @@
                     
                     <div class="pull-right">
                         <ul id="topmenu">
-                            <li class="current_topmenu"><a href="#">Início</a>
-                            <li><a href="#">Portfólio</a>
-                            <li><a href="#">Contato</a>
+                            <li class="<?=$cmc('index');?>"><a href="/">Início</a>
+                            <li class="<?=$cmc('portfolio');?>"><a href="/portfolio">Portfólio</a>
+                            <li class="<?=$cmc('contact');?>"><a href="#">Contato</a>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
