@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="padding-bottom:15px;">
     <div class="col-md-12 sitecontentbg">
         <div class="sitecontent row photo-frame">
             <div class="col-md-5 sidebar pull-left">
