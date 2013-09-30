@@ -1,0 +1,29 @@
+{
+    "projects": [
+        {
+            "name": "mobileprovider",
+            "title": "Mobile Provider",
+            "status": "development"
+        },
+        {
+            "name": "sigmaandroid",
+            "title": "Sigma Android",
+            "status": "development"
+        },
+        {
+            "name": "testedeconhecimento",
+            "title": "Teste de Conhecimento",
+            "status": "stopped"
+        },
+        {
+            "name": "pedidosereservas",
+            "title": "Pedidos e Reservas",
+            "status": "stopped"
+        },
+        {
+            "name": "fllecha",
+            "title": "Fllecha",
+            "status": "canceled"
+        }
+    ]
+}

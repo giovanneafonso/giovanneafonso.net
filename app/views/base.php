@@ -94,6 +94,7 @@ $cmc = function($name) use ($currentmenu) {
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/static/lib/marked.js"></script>
 <script src="/static/js/base.js"></script>
 <script src="/static/lib/less-1.4.1.min.js"></script>
     </body>

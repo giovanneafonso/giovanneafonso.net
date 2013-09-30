@@ -1,8 +1,14 @@
 @theme-title-color: #F70;
 @theme-title-font: 'Cookie';
+@topmenu-height: 70px;
 
 .theme-font (@font: @theme-title-font) {
     font-family: @font;
+}
+
+.background-black-transparent () {
+    background:url(http://www.walkerskicks.com/images/black%20transparent.png);
+    background-size:100%;
 }
 
 .theme-title-font {
@@ -30,13 +36,12 @@ position:fixed;
 top:0;left:0;
 width:100%;
 z-index:9999;
-background:url(http://www.walkerskicks.com/images/black%20transparent.png);
-background-size:100%;
+.background-black-transparent;
 box-shadow:0 2px 5px 1px #111;
 }
 .pageheader_margin {
 display:block;
-padding-top:70px;
+padding-top:@topmenu-height;
 }
 .sitecontent {
 padding-top:15px;
@@ -52,18 +57,18 @@ padding:10px;
 display:block;
 margin:0;padding:0;
 margin-top:-5px;
-height:70px;
+height:@topmenu-height;
 color:#EEE;
 .theme-font;
 font-size:34px;
 font-weight:bold;
 text-shadow:0 2px 5px #000;
-line-height:70px;
+line-height:@topmenu-height;
 }
 .codeitem {
 color:@theme-title-color;
 font-size:36px;
-line-height:70px;
+line-height:@topmenu-height;
 }
 .mylogoname {
 }
@@ -98,7 +103,7 @@ color:#CCC;
 font-size:22px;
 text-align:center;
 text-decoration:none;
-line-height:70px;
+line-height:@topmenu-height;
 text-shadow:1px 1px 1px #000;
 }
 #topmenu > li > a:hover, #topmenu > li > a:focus {
@@ -106,7 +111,7 @@ color:#FFF;
 background:#202020;
 box-shadow: 0 0 0 2px #222;
 background:url(../img/menubg-over.png);
-background-size: 100% 70px;
+background-size: 100% @topmenu-height;
 }
 
 .current_topmenu > a,
@@ -114,7 +119,7 @@ background-size: 100% 70px;
 .current_topmenu > a:focus {
 box-shadow: 0 0 0 2px #111;
 background:url(../img/menubg.png);
-background-size: 100% 70px;
+background-size: 100% @topmenu-height;
 color:#FFF !important;
 }
 
@@ -277,7 +282,7 @@ color:#BBB;
     margin-bottom:15px;
     padding:15px;
     cursor:default;
-    background:url(http://www.walkerskicks.com/images/black%20transparent.png) 100%;
+    .background-black-transparent;
     box-shadow:0 0 3px 2px #000;
 }
 
@@ -309,4 +314,69 @@ color:#BBB;
     margin-top:15px;
     padding:5px;
     border-top:2px solid #111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    
+}
+.overitem {
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    .background-black-transparent;
+    z-index:99999999999;
+}
+.overitem .row {
+    position:relative;
+}
+.overitem .row > div {
+    padding:15px;
+}
+.oi-body {
+    overflow:hidden;
+    overflow-y:scroll;
+    position:absolute;
+    top:@topmenu-height;
+    left:0;right:0;bottom:0;
+    padding:0 15px;
+    font-size:16px;
+}
+.oi-header {
+    height: @topmenu-height;
+    background:#FFF;
+    border-bottom:1px solid #bbb;
+    margin:0;padding:0;
+    overflow-y:scroll;
+}
+.oi-header h2 {
+    margin:0;
+    padding:0;
+}
+.oi-content {
+    background:#FFF;
+    min-height:600px;
+}
+.oi-sidebar {
+    background:url(../img/gray.png);
+    min-height:100%;
+    position:absolute;
+}
+
+.oi-about p {
+    margin-left:30px;
 }

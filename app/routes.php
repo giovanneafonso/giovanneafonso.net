@@ -26,3 +26,11 @@ Route::get('/portfolio', function()
         'content'=>View::make('portfolio')
     ));
 });
+
+Route::get('/ajax/projects', function()
+{
+    header('Content-Type: application/json');
+    die(json_encode(
+        App::make('Project')->getAll()
+    ));
+});

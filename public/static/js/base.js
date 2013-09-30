@@ -8,4 +8,10 @@ $(document).ready(function() {
     preloadImages([
         '/static/img/menubg-over.png'
     ]);
+    
+    console.log(marked('I am using __markdown__.'));
 });
+
+
+
+
