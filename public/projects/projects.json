@@ -1,6 +1,11 @@
 {
     "projects": [
         {
+            "name": "lesstranslation",
+            "title": "Tradução da documentação do Less css",
+            "status": "development"
+        },
+        {
             "name": "mobileprovider",
             "title": "Mobile Provider",
             "status": "development"

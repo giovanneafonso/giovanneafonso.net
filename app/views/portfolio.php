@@ -61,7 +61,7 @@ foreach($projects as $pname => $project) {
         
         <div class="pf-menu">
             <div class="text-right">
-                <button class="btn btn-primary"><span class="glyphicon glyphicon-bookmark"></span> Ver detalhes do projeto</button>
+                <button class="btn btn-primary" onclick="pfmodal.open(<?=e(json_encode($project));?>);"><span class="glyphicon glyphicon-bookmark"></span> Ver detalhes do projeto</button>
             </div>
         </div>
     </div>
@@ -125,7 +125,71 @@ foreach($projects as $pname => $project) {
 
 
 
-<div class="overitem">
+<div class="overitem" id="portfolio_modal">
+    <div class="oi-header">
+        <div class="container">
+            <div class="row">
+                <div class="pull-left" style="padding-left:0;">
+                    <h2 id="portfolio_item_title">Mobile Provider</h2>
+                </div>
+                <div class="pull-right" style="padding-right:0;">
+                    <button class="btn btn-default" onclick="pfmodal.close()"><span class="glyphicon glyphicon-eye-close"></span> Fechar detalhes do projeto <b>(ESC)</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="oi-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 oi-sidebar">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item portfolio_item_menu" data-pfitem="about">Sobre o projeto</a>
+                        <a href="#" class="list-group-item portfolio_item_menu" data-pfitem="mywork">Minha participação</a>
+                        <a href="#" class="list-group-item portfolio_item_menu" data-pfitem="screenshots">Screenshots</a>
+                    </div>
+                </div>
+                <div class="col-md-8 pull-right oi-content" id="portfolio_item_content">
+                    <div class="oi-about">
+                        <h3>Resumo sobre o projeto</h3>
+                        <p>
+                            <a href="http://mobileprovider.com.br" target="_blank">Mobile provider</a> é um projeto da empresa
+                            <a href="http://centralsigma.com.br" target="_blank">Rede Industrial</a>
+                            que reúne uma coleção de aplicativos empresariais que podem ser acessados pela web, tablets ou smartphones.
+                        </p>
+                    </div>
+                    <div class="oi-idid">
+                        <h3>O que fiz neste projeto</h3>
+                        
+                        <ul>
+                            <li> Item 1 da lista
+                            <li> Item dois da lista
+                            <li> mais um item aqui
+                            <li> Item 1 da lista
+                            <li> Outro item
+                        </ul>
+                    </div>
+                    <div class="oi-screenshots">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="img-thumbnail img-responsive" style="height:100px;width:100%;max-width:165px;">
+                                <img class="img-thumbnail img-responsive" style="height:100px;width:100%;max-width:165px;">
+                                <img class="img-thumbnail img-responsive" style="height:100px;width:100%;max-width:165px;">
+                            </div>
+                            <div class="col-md-9">
+                                <img class="img-thumbnail img-responsive" style="height:600px;width:100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<?php /*
+<div class="overitem" id="portfolio_modal">
     <div class="oi-header">
         <div class="container">
             <div class="row">
@@ -133,7 +197,7 @@ foreach($projects as $pname => $project) {
                     <h2>Mobile Provider</h2>
                 </div>
                 <div class="pull-right" style="padding-right:0;">
-                    <button class="btn btn-default"><span class="glyphicon glyphicon-eye-close"></span> Fechar detalhes do projeto <b>(ESC)</b></button>
+                    <button class="btn btn-default" onclick="pfmodal.close()"><span class="glyphicon glyphicon-eye-close"></span> Fechar detalhes do projeto <b>(ESC)</b></button>
                 </div>
             </div>
         </div>
@@ -186,3 +250,5 @@ foreach($projects as $pname => $project) {
         </div>
     </div>
 </div>
+*/ ?>
+
