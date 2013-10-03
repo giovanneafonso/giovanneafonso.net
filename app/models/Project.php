@@ -1,6 +1,6 @@
 <?php
 
-class Project
+class ProjectOld
 {
     // Projects directory
     // Important: Put slash at the final of string, e.g.: '../public/projects/'
@@ -67,5 +67,14 @@ class Project
         }
         
         return $projects;
+    }
+}
+
+class Project
+{
+    public function getAll()
+    {
+        $projeto = simplexml_load_file('../public/projects/teste.html');
+        dd($projeto);
     }
 }
