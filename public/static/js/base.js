@@ -29,7 +29,7 @@ var pfmodal = {
     // item de portfolio atual
     item: {},
     // configurações gerais
-    initPage: 'about',
+    initPage: 1,
     
     /**
      * Retorna o elemento modal
@@ -62,7 +62,7 @@ var pfmodal = {
      * Abre a janela modal com os dados do item atual
      */
     open: function(item) {
-        this.init();
+        this.init(item);
         
         this.item = item;
         $('body').css('overflow','hidden');
@@ -82,11 +82,12 @@ var pfmodal = {
      * Diz em que "página" o modal está
      */
     setPage: function(page_name) {
-        //console.log(this.item);
+        
         this.page
+            .createMenus(this.item.pages)
             .setCurrentMenu(page_name)
             .setTitle(this.item.title)
-            .setContent(this.item.data[page_name]);
+            .setContent(this.item.pages[page_name].content);
     },
     
     /**
@@ -109,6 +110,21 @@ var pfmodal = {
          */
         setTitle: function(title) {
             this._title.html(title);
+            return this;
+        },
+        
+        /**
+         * Cria uma lista de menus
+         */
+        createMenus: function(pages) {
+            var mhtml = '<a href="javascript:pfmodal.setPage(:pid)" class="list-group-item portfolio_item_menu">:label</a>';
+            var phtml = '';
+            
+            $.each(pages, function(idx, page) {
+                phtml += mhtml.replace(':pid',page.id).replace(':label',page.title);
+            });
+            
+            $('#pf-listamenus').html(phtml);
             return this;
         },
         

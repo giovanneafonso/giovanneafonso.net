@@ -25,7 +25,7 @@ function projectImageHere() {
     <?php
 }
 
-foreach($projects as $pname => $project) {
+foreach($projects as $pindex => $project) {
 ?>
     <div class="portfolio-item">
         <div class="row">
@@ -52,7 +52,7 @@ foreach($projects as $pname => $project) {
                 </div>
                 
                 <p class="pf-desc">
-                    <?=$project->data->resume;?>
+                    <?=$project->resume;?>
                 </p>
             </div>
             
@@ -143,7 +143,7 @@ foreach($projects as $pname => $project) {
         <div class="container">
             <div class="row">
                 <div class="col-md-4 oi-sidebar">
-                    <div class="list-group">
+                    <div class="list-group" id="pf-listamenus">
                         <a href="#" class="list-group-item portfolio_item_menu" data-pfitem="about">Sobre o projeto</a>
                         <a href="#" class="list-group-item portfolio_item_menu" data-pfitem="mywork">Minha participação</a>
                         <a href="#" class="list-group-item portfolio_item_menu" data-pfitem="screenshots">Screenshots</a>

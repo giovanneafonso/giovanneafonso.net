@@ -74,7 +74,31 @@ class Project
 {
     public function getAll()
     {
-        $projeto = simplexml_load_file('../public/projects/teste.html');
-        dd($projeto);
+        $portfolio = DB::select('
+            select
+                p.id as pid,
+                p.title as project_title,
+                p.status as project_status,
+                p.resume,
+                pg.*
+            from project as p
+            left join project_page as pg on pg.project_id = p.id
+        ');
+        
+        $projects = [];
+        
+        foreach($portfolio as $project) {
+            if(!isset($projects[$project->pid])) {
+                $projects[$project->pid] = new stdClass;
+                $projects[$project->pid]->title  = $project->project_title;
+                $projects[$project->pid]->resume  = $project->resume;
+                $projects[$project->pid]->status = $project->project_status;
+                $projects[$project->pid]->pages  = [];
+            }
+            
+            $projects[$project->pid]->pages[$project->id] = $project;
+        }
+        
+        return $projects;
     }
 }
