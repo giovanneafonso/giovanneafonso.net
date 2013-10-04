@@ -28,14 +28,20 @@ var pfmodal = {
     _modal: $('#portfolio_modal'),
     // item de portfolio atual
     item: {},
-    // configurações gerais
-    initPage: 1,
     
     /**
      * Retorna o elemento modal
      */
     getModal: function() {
         return this._modal;
+    },
+    
+    /**
+     * Retorna o "primeiro" item de uma array/objeto associativa
+     */
+    getFirstAssoc: function(obj) {
+        for (var prop in obj)
+            return prop;
     },
     
     /**
@@ -62,12 +68,12 @@ var pfmodal = {
      * Abre a janela modal com os dados do item atual
      */
     open: function(item) {
-        this.init(item);
+        this.init();
         
         this.item = item;
         $('body').css('overflow','hidden');
         this.getModal().fadeIn();
-        this.setPage(this.initPage);
+        this.setPage(this.getFirstAssoc(this.item.pages));
     },
     
     /**
@@ -82,7 +88,7 @@ var pfmodal = {
      * Diz em que "página" o modal está
      */
     setPage: function(page_name) {
-        
+        //console.log(this.item);
         this.page
             .createMenus(this.item.pages)
             .setCurrentMenu(page_name)
@@ -117,11 +123,11 @@ var pfmodal = {
          * Cria uma lista de menus
          */
         createMenus: function(pages) {
-            var mhtml = '<a href="javascript:pfmodal.setPage(:pid)" class="list-group-item portfolio_item_menu">:label</a>';
+            var mhtml = '<a href="javascript:pfmodal.setPage(:pid)" class="list-group-item portfolio_item_menu" data-pfitem=":pid">:label</a>';
             var phtml = '';
             
             $.each(pages, function(idx, page) {
-                phtml += mhtml.replace(':pid',page.id).replace(':label',page.title);
+                phtml += mhtml.replace(':pid',page.id).replace(':pid',page.id).replace(':label',page.title);
             });
             
             $('#pf-listamenus').html(phtml);
