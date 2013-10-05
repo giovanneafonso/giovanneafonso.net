@@ -31,7 +31,7 @@ $cmc = function($name) use ($currentmenu) {
                         <ul id="topmenu">
                             <li class="<?=$cmc('index');?>"><a href="/">Início</a>
                             <li class="<?=$cmc('portfolio');?>"><a href="/portfolio">Portfólio</a>
-                            <li class="<?=$cmc('contact');?>"><a href="#">Contato</a>
+                            <li class="<?=$cmc('contact');?>"><a href="/contato">Contato</a>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
@@ -44,6 +44,7 @@ $cmc = function($name) use ($currentmenu) {
                 
                 <?=$content;?>
                 
+                <div class="alert alert-danger"><strong>Nota:</strong> Site ainda em desenvolvimento.</div>
                 
             </div><!-- pagewidth -->
             <div class="clearfix"></div>

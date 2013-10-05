@@ -13,15 +13,23 @@
 
 Route::get('/', function()
 {
-	return View::make('base',array(
+	return View::make('base', array(
         'currentmenu' => 'index',
         'content'     => View::make('index')
     ));
 });
 
+Route::get('/contato', function()
+{
+    return View::make('base', array(
+        'currentmenu' => 'contact',
+        'content'     => View::make('contact')
+    ));
+});
+
 Route::get('/portfolio', function()
 {
-    return View::make('base',array(
+    return View::make('base', array(
         'currentmenu' => 'portfolio',
         'content' => View::make('portfolio')
     ));
