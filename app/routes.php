@@ -31,7 +31,7 @@ Route::get('/portfolio/{id}', function($id)
 {
     return View::make('base', array(
         'currentmenu' => 'portfolio',
-        'content' => View::make('portfolio_item', App::make('portfolio')->getProject($id)),
+        'content' => View::make('portfolio_item', App::make('Portfolio')->getProject($id)),
     ));
 });
 
@@ -39,6 +39,6 @@ Route::get('/ajax/projects', function()
 {
     header('Content-Type: application/json');
     die(json_encode(
-        App::make('portfolio')->getProjects()
+        App::make('Portfolio')->getProjects()
     ));
 });

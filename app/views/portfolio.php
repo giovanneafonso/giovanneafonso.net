@@ -1,6 +1,6 @@
 <?php
 
-$projects = App::make('portfolio')->getProjects();
+$projects = App::make('Portfolio')->getProjects();
 $toggle = false;
 
 ?><div id="portfolio-items">
