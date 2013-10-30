@@ -27,6 +27,21 @@ class Portfolio
     }
     
     /**
+     * Lista de projetos relacionados
+     *
+     * @param stdClass|int $project
+     * @param int $limit
+     * @return stdClass
+     */
+    public function getRelatedProjects($project, $limit = 3)
+    {
+        return DB::select('select * from project where not id = :pid order by `order` asc limit :limit', array(
+            ':pid'   => is_int($project)?$project:$project->id,
+            ':limit' => $limit
+        ));
+    }
+    
+    /**
      * Informações de um projeto e suas páginas
      *
      * @return array
@@ -37,5 +52,18 @@ class Portfolio
             'project' => DB::select('select * from project where id = :pid', array(':pid' => $id))[0],
             'pages'   => DB::select('select * from project_page where project_id = :pid order by `order` asc', array(':pid' => $id))
         );
+    }
+    
+    
+    /**
+     * Cria template dos projetos relacionados
+     *
+     * @param stdClass|int $project
+     * @return string
+     */
+    public function makeRelated($project)
+    {
+        $projects = $this->getRelatedProjects($project);
+        return View::make('portfolio._related',array('projects'=>$projects));
     }
 }

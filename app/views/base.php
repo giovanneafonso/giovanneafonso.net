@@ -2,7 +2,7 @@
 
 $cmc = function($name) use ($currentmenu) {
     if($name==$currentmenu) {
-        return 'current_topmenu';
+        return 'current_menu';
     }
     return '';
 };
@@ -14,89 +14,55 @@ $cmc = function($name) use ($currentmenu) {
         <title>Giovanne Afonso</title>
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cookie">
+        <link href='http://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet/less" type="text/css" href="/static/css/base.less.css">
     </head>
     
     <body>
-        <div class="sitecontainer">
+        <div class="sitecontainer" id="sitecontainer">
             
-            <div class="pageheader">
-                <div class="pagewidth">
-                    <div class="mylogo pull-left">
-                        <span class="codeitem">&lt;</span><span class="mylogoname">GiovanneAfonso</span><span class="codeitem">&gt;</span>
-                    </div>
+            <header id="siteheader">
+                <div class="row">
+                    <!--<div id="sitelogo">
+                        GA
+                    </div>-->
+                    <a href="/" id="sitelogo2">
+                        <img src="/static/img/logo.png">
+                    </a>
                     
-                    <div class="pull-right">
-                        <ul id="topmenu">
-                            <li class="<?=$cmc('index');?>"><a href="/">Início</a>
-                            <li class="<?=$cmc('portfolio');?>"><a href="/portfolio">Portfólio</a>
-                            <li class="<?=$cmc('contact');?>"><a href="/contato">Contato</a>
+                    <nav id="topmenu">
+                        <ul>
+                            <li class="<?=$cmc('index');?>"> <a href="/">Início</a>
+                            <li class="<?=$cmc('portfolio');?>"> <a href="/portfolio">Portfólio</a>
+                            <li class="<?=$cmc('contact');?>"> <a href="/contato">Contato</a>
                         </ul>
-                    </div>
+                    </nav>
                     <div class="clearfix"></div>
                 </div>
+            </header>
+            
+            <div id="sitecontent">
+                <?=$content;?>
             </div>
             
-            
-            <div class="pageheader_margin pagewidth">
-                
-                
-                <?=$content;?>
-                
-                <div class="alert alert-danger"><strong>Nota:</strong> Site ainda em desenvolvimento.</div>
-                
-            </div><!-- pagewidth -->
-            <div class="clearfix"></div>
-            
-            <footer id="pagefooter">
-                <div id="pagefooter_inner">
-                    <div class="pagewidth">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div style="text-align:center;color:#444;margin-bottom:20px;">
-                                    Site criado por Giovanne Afonso
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-7">
-                                <h3>Um pouco mais...</h3>
-                                <div>
-                                    <p>
-                                    Estou sempre procurando evoluir em todas as áreas da minha vida,
-                                    gosto de fazer coisas diferentes e gosto de desafios. Cada dia
-                                    que se passa meu emprego e a faculdade me ajudam a evoluir ainda
-                                    mais e é incrível como cada ano que passa a diferença é tão grande!
-                                    Olho pra trás e vejo quem eu era e quem sou agora e tenho orgulho
-                                    de quem estou me tornando. Um dia só vale a pena quando você dorme
-                                    melhor do que acordou.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <h3>Objetivos futuros</h3>
-                                <div>
-                                    <p>
-                                    Quero ter minha própria empresa, gerenciar uma grande equipe e deixar
-                                    o mundo um pouco melhor com a minha vida. Afinal, para que vivemos se não
-                                    para fazer a vida ser bela? Eu não quero apenas viver para mim mesmo,
-                                    quero viver e propagar a minha visão do mundo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <footer id="sitefooter">
+                <div class="row">
+                    <div class="col-sm-12">
+                        &copy; 2013 Giovanne Afonso
                     </div>
                 </div>
             </footer>
         </div>
-
-
-
+        
+        <div id="loading-site">
+            <!-- Carregando... -->
+            <img src="http://augusto.digitpa.gov.it/img/ajax-loader.gif">
+        </div>
+        
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="/static/lib/marked.js"></script>
 <script src="/static/js/base.js"></script>
-<script src="/static/lib/less-1.4.1.min.js"></script>
+<script src="/static/lib/less-1.5.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     </body>
 </html>

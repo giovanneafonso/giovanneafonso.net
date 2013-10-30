@@ -1,0 +1,412 @@
+@theme-title-color: #F70;
+@theme-title-font: 'Cookie';
+@topmenu-height: 70px;
+@pf-page-border-color: #EEE;
+
+.theme-font (@font: @theme-title-font) {
+    font-family: @font;
+}
+
+.background-black-transparent () {
+    background:url(../img/black%20transparent.png);
+    background-size:100%;
+}
+
+.theme-title-font {
+    .theme-font;
+}
+.theme-title-color {
+    color:@theme-title-color;
+}
+
+.inpad {
+    padding:15px;
+}
+
+body {
+background: url(../img/bgr.jpg) top center no-repeat #101620;
+}
+::selection  {
+background:#DDF;
+}
+.sitecontainer {
+display:block;
+margin:0;
+padding:0;
+width:100%;
+height:auto;
+}
+.pageheader {
+position:fixed;
+top:0;left:0;
+width:100%;
+z-index:9999;
+.background-black-transparent;
+box-shadow:0 2px 5px 1px #111;
+}
+.pageheader_margin {
+display:block;
+padding-top:@topmenu-height;
+}
+.sitecontent {
+padding-top:15px;
+}
+.pagewidth {
+width:950px;
+margin:auto;
+}
+.pagepad {
+padding:10px;
+}
+.mylogo {
+display:block;
+margin:0;padding:0;
+margin-top:-5px;
+height:@topmenu-height;
+color:#EEE;
+.theme-font;
+font-size:34px;
+font-weight:bold;
+text-shadow:0 2px 5px #000;
+line-height:@topmenu-height;
+}
+.codeitem {
+color:@theme-title-color;
+font-size:36px;
+line-height:@topmenu-height;
+}
+.mylogoname {
+}
+.impactwords {
+display:block;
+padding:10px 0 30px;
+color:#FFF;
+.theme-font;
+text-align:center;
+text-shadow:0 2px 5px #000;
+}
+.impactsupport {
+margin:auto;
+margin-bottom:10px;
+padding:0px 0;
+z-index:99;
+}
+
+#topmenu {
+display:block;
+margin:0;padding:0;
+list-style:none;
+}
+#topmenu > li {
+display:inline-block;
+}
+#topmenu > li > a {
+display:block;
+width:100px;
+color:#CCC;
+.theme-font;
+font-size:22px;
+text-align:center;
+text-decoration:none;
+line-height:@topmenu-height;
+text-shadow:1px 1px 1px #000;
+}
+#topmenu > li > a:hover, #topmenu > li > a:focus {
+color:#FFF;
+background:#202020;
+box-shadow: 0 0 0 2px #222;
+background:url(../img/menubg-over.png);
+background-size: 100% @topmenu-height;
+}
+
+.current_topmenu > a,
+.current_topmenu > a:hover,
+.current_topmenu > a:focus {
+box-shadow: 0 0 0 2px #111;
+background:url(../img/menubg.png);
+background-size: 100% @topmenu-height;
+color:#FFF !important;
+}
+
+
+
+.sidebar {
+min-height:300px;
+}
+.side-pad {
+padding:0;
+}
+.sideheader {
+margin-bottom:5px;
+padding:5px 0;
+border-bottom:1px solid #202020;
+background:#000;
+color:#FFF;
+.theme-font;
+font-size:28px;
+text-align:center;
+}
+.skill-list {
+background:#111;
+box-shadow:0 0 2px 0 #000;
+color:#999;
+margin-bottom:10px;
+}
+.skill-title {
+display:block;
+color:@theme-title-color;
+text-align:right;
+font-weight:bold;
+}
+.skill-item > .skill-progress > .progress {
+height:14px;
+}
+.skill-progress {
+float:right;
+width:75%;
+padding-top:8px;
+}
+.skill-name {
+float:left;
+width:23%;
+color:#FFF;
+font-weight:bold;
+line-height:30px;
+text-align:right;
+}
+
+
+.bodycontent {
+min-height:500px;
+margin:0;
+padding-bottom:15px;
+}
+.bodytitle {
+margin-bottom:20px;
+text-align:center;
+}
+.bodytitle h1 {
+margin:0;
+color:#EEF;
+font-size:32px;
+line-height:40px;
+text-shadow:1px 1px 1px #000;
+}
+
+
+
+.abt-text {
+font-size:13px;
+text-align:justify;
+}
+
+
+
+
+
+
+/**======================================================
+ * Início
+ *=======================================================
+ */
+
+#myresume {
+color:#ddd;
+}
+#myresume p {
+font-size:14px;
+color:#BBB;
+}
+#myresume h4 {
+color:@theme-title-color;
+.theme-font;
+font-size:32px;
+}
+.mytopresume {
+padding:15px;
+/*
+background:#f7f7ff;
+background:url(../img/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg);
+border:10px solid #FFF;
+*/
+color:#333;
+}
+.mytopresume h4 {
+margin-top:0;
+color:#000;
+color:@theme-title-color;
+.theme-font;
+font-size:32px;
+}
+.mytopresume p {
+color:#333;
+}
+#myuniversities {
+list-style:none;
+margin:0;
+}
+#myuniversities > li {
+width:50%;
+float:left;
+}
+#myuniversities h5 {
+font-size:18px;
+color:#FFF;
+}
+#myuniversities p {
+
+}
+
+
+#pagefooter {
+display:block;
+background: url(../img/footer-bgr-tile.jpg) left top repeat-x;
+}
+#pagefooter_inner {
+padding-top:20px;
+background: url(../img/footer-bgr-img.jpg) center bottom no-repeat;
+min-height:280px;
+color:#777;
+}
+#pagefooter_inner h3 {
+margin:10px 0;
+.theme-font;
+font-size:32px;
+color:#BBB;
+}
+
+
+
+
+
+
+/**======================================================
+ * Portfolio
+ *=======================================================
+ */
+#portfolio-items {
+    padding-top:15px;
+}
+
+.portfolio-item {
+    margin-bottom:15px;
+    padding:15px;
+    cursor:default;
+    .background-black-transparent;
+    box-shadow:0 0 3px 2px #000;
+}
+.portfolio-hover {
+    &:hover {
+        cursor:pointer;
+        background:#000;
+        box-shadow: 0 0 3px 2px #333;
+    }
+}
+
+.pf-img .img-thumbnail {
+    width:100%;
+    min-height:250px;
+}
+
+.portfolio-item h2, .portfolio-item h1 {
+    margin:0;
+    padding:0;
+    line-height:1em;
+    color:@theme-title-color;
+    .theme-font;
+    font-size:64px;
+}
+
+.pf-status {
+    margin:3px 0 15px;
+}
+
+.pf-desc {
+    color:#EEE;
+    font-size:18px;
+}
+
+.pf-menu {
+    margin:-15px;
+    margin-top:15px;
+    padding:5px;
+    border-top:2px solid #111;
+}
+
+
+.sp-content {
+    margin-top:-15px;
+    margin-bottom:15px;
+    background:#FFF;
+    min-height:500px;
+    box-shadow: 0 0 3px 2px #000;
+    border-bottom:15px solid #000;
+    font-size:16px;
+}
+
+.sp-page {
+    margin-bottom: 15px;
+    padding-bottom:80px;
+    background: url("http://mobileprovider.com.br/resources/img/separator.png") center bottom no-repeat transparent;
+    background-size: 100% 12px;
+    max-width: 644px;
+}
+.sp-page-content {
+    margin-left:30px;
+}
+
+.sp-title {
+    .theme-title-font;
+    .theme-title-color;
+    text-shadow:1px 1px #000;
+    font-size:48px;
+}
+
+
+
+
+
+.content_separator {
+    display:block;
+    margin:100px 0 30px;
+    height:16px;
+    background: url("http://mobileprovider.com.br/resources/img/separator.png") center top no-repeat transparent;
+    background-size:100% 12px;
+    clear:both;
+}
+
+
+
+
+
+
+
+
+
+// http://bradsknutson.com/blog/css3-rollover-social-media-icons/
+.social-slide (@url) {
+    display:block;
+	background-image: url(@url);
+	height: 48px;
+	width: 48px;
+	margin: 10px;
+	float: left;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+    
+    &:hover {
+        cursor:pointer;
+        background-position: 0px -48px;
+        box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+    }
+}
+
+.social-slide-facebook {
+    .social-slide('http://bradsknutson.com/wp-content/themes/bradsknutson/images/facebook-hover.png');
+}
+.social-slide-linkedin {
+    .social-slide('http://bradsknutson.com/wp-content/themes/bradsknutson/images/linkedin-hover.png');
+}

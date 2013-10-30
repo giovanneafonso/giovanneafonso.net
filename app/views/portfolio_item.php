@@ -1,55 +1,27 @@
-<?php
-
-?>
-<div style="padding-top:15px;"></div>
-<div class="portfolio-item">
+<?=View::make('portfolio.'.$project->id, array('project' => $project));?>
+<?=App::make('Portfolio')->makeRelated($project);?>
+<?php /* <article>
+    <section id="portfolio-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <hgroup>
+                    <h1><?=$project->title;?></h1>
+                    <h4><?=$project->resume;?></h4>
+                </hgroup>
+            </div>
+            <div class="col-sm-6">
+                <img src="<?=$project->thumbnail;?>" class="thumbnail" style="width:100%;">
+            </div>
+        </div>
+    </section>
+    
     <div class="row">
         
-        <div class="col-sm-5">
-            <div class="pf-img">
-                <img src="<?=$project->thumbnail;?>" class="img-thumbnail">
-            </div>
-        </div>
-        
-        <div class="col-sm-7">
-            <h1><?=$project->title;?></h1>
-            
-            <div class="pf-status">
-                <?php
-                    switch($project->status) {
-                        case 'finished':
-                            echo '<span class="label label-success">Concluído</span>';
-                            break;
-                        case 'development':
-                            echo '<span class="label label-primary">Em desenvolvimento</span>';
-                            break;
-                        case 'stopped':
-                            echo '<span class="label label-default">Parado</span>';
-                            break;
-                        case 'canceled':
-                            echo '<span class="label label-danger">Cancelado</span>';
-                            break;
-                    }
-                ?>
-            </div>
-            
-            <p class="pf-desc">
-                <?=$project->resume;?>
-            </p>
-        </div>
     </div>
-</div>
+</article>
 
-<div class="sp-content">
-    <div class="inpad">
-        <?php foreach($pages as $page) { ?>
-            <section id="project-page-<?=$page->id;?>" class="sp-page">
-                <?php /*<div class="well"><?php var_dump($page); ?></div>*/ ?>
-                <h2 class="sp-title"><?=$page->title;?></h2>
-                <div class="sp-page-content">
-                    <?=$page->content;?>
-                </div>
-            </section>
-        <?php } ?>
-    </div>
-</div>
+
+<div class="separator"></div>
+<?php var_dump($project); ?>
+
+*/ ?>
